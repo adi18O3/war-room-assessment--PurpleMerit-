@@ -1,0 +1,101 @@
+{
+  "feature": "NovaMind Search",
+  "company": "PurpleMerit",
+  "description": "AI-powered natural language search. Users type plain English queries instead of keywords.",
+  "rollout_info": {
+    "day_1_to_3": "Pre-launch baseline (old keyword search)",
+    "day_4": "NovaMind launched to 50% of users",
+    "day_6": "Hotfix deployed — partial accuracy improvement"
+  },
+  "metrics": {
+    "search_accuracy_pct": {
+      "description": "% of search queries returning correct results (sampled daily)",
+      "unit": "%",
+      "target": 95.0,
+      "note": "Below 90% is considered a user-trust risk",
+      "daily": [
+        {"day": 1, "value": 95.2, "phase": "pre_launch"},
+        {"day": 2, "value": 95.0, "phase": "pre_launch"},
+        {"day": 3, "value": 95.3, "phase": "pre_launch"},
+        {"day": 4, "value": 91.0, "phase": "launch"},
+        {"day": 5, "value": 84.7, "phase": "launch"},
+        {"day": 6, "value": 88.5, "phase": "post_hotfix"},
+        {"day": 7, "value": 88.9, "phase": "post_hotfix"}
+      ]
+    },
+    "daily_active_users": {
+      "description": "Number of users actively using the product each day",
+      "unit": "users",
+      "target": 12000,
+      "daily": [
+        {"day": 1, "value": 11800, "phase": "pre_launch"},
+        {"day": 2, "value": 12100, "phase": "pre_launch"},
+        {"day": 3, "value": 11900, "phase": "pre_launch"},
+        {"day": 4, "value": 13200, "phase": "launch"},
+        {"day": 5, "value": 14100, "phase": "launch"},
+        {"day": 6, "value": 13800, "phase": "post_hotfix"},
+        {"day": 7, "value": 13500, "phase": "post_hotfix"}
+      ]
+    },
+    "support_tickets_per_day": {
+      "description": "Number of support tickets mentioning wrong or missing search results",
+      "unit": "tickets",
+      "target": 20,
+      "note": "Baseline was ~18/day on old keyword search",
+      "daily": [
+        {"day": 1, "value": 18, "phase": "pre_launch"},
+        {"day": 2, "value": 19, "phase": "pre_launch"},
+        {"day": 3, "value": 17, "phase": "pre_launch"},
+        {"day": 4, "value": 34, "phase": "launch"},
+        {"day": 5, "value": 89, "phase": "launch"},
+        {"day": 6, "value": 61, "phase": "post_hotfix"},
+        {"day": 7, "value": 58, "phase": "post_hotfix"}
+      ]
+    },
+    "nps_score": {
+      "description": "Net Promoter Score — how likely users are to recommend PurpleMerit (-100 to +100)",
+      "unit": "score",
+      "target": 42,
+      "note": "NPS lags 2-3 days behind the actual experience",
+      "daily": [
+        {"day": 1, "value": 42, "phase": "pre_launch"},
+        {"day": 2, "value": 43, "phase": "pre_launch"},
+        {"day": 3, "value": 42, "phase": "pre_launch"},
+        {"day": 4, "value": 44, "phase": "launch"},
+        {"day": 5, "value": 40, "phase": "launch"},
+        {"day": 6, "value": 35, "phase": "post_hotfix"},
+        {"day": 7, "value": 31, "phase": "post_hotfix"}
+      ]
+    },
+    "query_response_time_ms": {
+      "description": "Average time for a search query to return results (milliseconds)",
+      "unit": "ms",
+      "target": 400,
+      "note": "Spike on Day 5 caused by indexing pipeline overload",
+      "daily": [
+        {"day": 1, "value": 380, "phase": "pre_launch"},
+        {"day": 2, "value": 390, "phase": "pre_launch"},
+        {"day": 3, "value": 385, "phase": "pre_launch"},
+        {"day": 4, "value": 420, "phase": "launch"},
+        {"day": 5, "value": 1240, "phase": "launch"},
+        {"day": 6, "value": 680, "phase": "post_hotfix"},
+        {"day": 7, "value": 590, "phase": "post_hotfix"}
+      ]
+    },
+    "churn_per_day": {
+      "description": "Number of premium users who cancelled their subscription that day",
+      "unit": "users",
+      "target": 8,
+      "note": "Churn is a lagging indicator — today's cancellations reflect experiences from 3-4 days ago",
+      "daily": [
+        {"day": 1, "value": 7,  "phase": "pre_launch"},
+        {"day": 2, "value": 8,  "phase": "pre_launch"},
+        {"day": 3, "value": 7,  "phase": "pre_launch"},
+        {"day": 4, "value": 9,  "phase": "launch"},
+        {"day": 5, "value": 11, "phase": "launch"},
+        {"day": 6, "value": 19, "phase": "post_hotfix"},
+        {"day": 7, "value": 24, "phase": "post_hotfix"}
+      ]
+    }
+  }
+}

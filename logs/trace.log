@@ -1,0 +1,149 @@
+12:27:11  ollama check    skipped (dry-run)
+12:27:11  loaded  6 metrics  |  25 feedback entries
+12:27:11  
+================================================
+12:27:11    WAR ROOM  |  NovaMind Search
+12:27:11  ================================================
+12:27:11  
+[phase 1] running agents concurrently...
+12:27:11  >> data_analyst starting
+12:27:11     [tool] data_analyst => {'metrics': {'search_accuracy_pct': {'latest': 88.9, 'baseline': 95.2, 'target':
+12:27:11  >> pm_agent starting
+12:27:11     [tool] pm_agent => {'metrics': {'search_accuracy_pct': {'latest': 88.9, 'baseline': 95.2, 'target':
+12:27:11  >> marketing_agent starting
+12:27:11     [tool] marketing_agent => {'sentiment': {'total': 25, 'counts': {'positive': 7, 'neutral': 6, 'negative': 
+12:27:11     [llm]  data_analyst => {"verdict": "PAUSE", "confidence": 0.5, "health_score": 0.5, "key_finding": "", 
+12:27:11     data_analyst done => PAUSE  (52ms)
+12:27:11     [llm]  pm_agent => {"verdict": "PAUSE", "confidence": 0.5, "user_impact": "", "summary": "[dry-run]
+12:27:11     pm_agent done => PAUSE  (52ms)
+12:27:11     [llm]  marketing_agent => {"verdict": "PAUSE", "confidence": 0.5, "brand_risk": "high", "sentiment_summary
+12:27:11     marketing_agent done => PAUSE  (52ms)
+12:27:11  
+[phase 1] results:
+12:27:11    data_analyst            PAUSE       confidence=50%
+12:27:11    pm_agent                PAUSE       confidence=50%
+12:27:11    marketing_agent         PAUSE       confidence=50%
+12:27:11  
+[phase 2] risk agent reviewing...
+12:27:11  >> risk_agent starting
+12:27:11     [tool] risk_agent => {'risks': {'risk_score': 10, 'risk_level': 'critical', 'high_severity': [{'id': 
+12:27:11     [llm]  risk_agent => {"verdict": "PAUSE", "confidence": 0.5, "overall_risk": "high", "critical_findin
+12:27:11     risk_agent done => PAUSE  (52ms)
+12:27:11    risk_agent            PAUSE       confidence=50%
+12:27:11  
+[phase 3] synthesising...
+12:27:11  
+  => DECISION: PAUSE  (70% confidence)
+
+
+# structured trace below
+[
+  {
+    "id": "485e1b2b",
+    "type": "tool",
+    "actor": "tool:data_analyst",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.835050+00:00",
+    "error": null
+  },
+  {
+    "id": "d8493ae6",
+    "type": "tool",
+    "actor": "tool:pm_agent",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.835554+00:00",
+    "error": null
+  },
+  {
+    "id": "d59941fe",
+    "type": "tool",
+    "actor": "tool:marketing_agent",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.836005+00:00",
+    "error": null
+  },
+  {
+    "id": "fd06d4ed",
+    "type": "llm",
+    "actor": "llm:data_analyst",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.886756+00:00",
+    "error": null
+  },
+  {
+    "id": "71df1057",
+    "type": "agent",
+    "actor": "data_analyst",
+    "status": "ok",
+    "duration_ms": 52,
+    "ts": "2026-04-10T12:27:11.886929+00:00",
+    "error": null
+  },
+  {
+    "id": "85d7bba5",
+    "type": "llm",
+    "actor": "llm:pm_agent",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.887048+00:00",
+    "error": null
+  },
+  {
+    "id": "414e508b",
+    "type": "agent",
+    "actor": "pm_agent",
+    "status": "ok",
+    "duration_ms": 52,
+    "ts": "2026-04-10T12:27:11.887153+00:00",
+    "error": null
+  },
+  {
+    "id": "006b6809",
+    "type": "llm",
+    "actor": "llm:marketing_agent",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.887257+00:00",
+    "error": null
+  },
+  {
+    "id": "a31c8be4",
+    "type": "agent",
+    "actor": "marketing_agent",
+    "status": "ok",
+    "duration_ms": 52,
+    "ts": "2026-04-10T12:27:11.887333+00:00",
+    "error": null
+  },
+  {
+    "id": "ecfd8247",
+    "type": "tool",
+    "actor": "tool:risk_agent",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.888252+00:00",
+    "error": null
+  },
+  {
+    "id": "5ee6a7b3",
+    "type": "llm",
+    "actor": "llm:risk_agent",
+    "status": "ok",
+    "duration_ms": null,
+    "ts": "2026-04-10T12:27:11.939440+00:00",
+    "error": null
+  },
+  {
+    "id": "38abeb77",
+    "type": "agent",
+    "actor": "risk_agent",
+    "status": "ok",
+    "duration_ms": 52,
+    "ts": "2026-04-10T12:27:11.939614+00:00",
+    "error": null
+  }
+]

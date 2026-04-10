@@ -1,0 +1,164 @@
+{
+  "feature": "NovaMind Search",
+  "total": 25,
+  "entries": [
+    {
+      "id": "F01", "day": 4, "sentiment": "positive", "rating": 5,
+      "channel": "in_app",
+      "text": "Finally I can search in plain English. Typed 'tasks overdue this week' and got exactly what I needed. Love this.",
+      "tags": ["natural_language", "first_impression"]
+    },
+    {
+      "id": "F02", "day": 4, "sentiment": "positive", "rating": 5,
+      "channel": "in_app",
+      "text": "NovaMind is a massive upgrade. Replaced three manual searches with one query. My team is already using it daily.",
+      "tags": ["productivity", "team_adoption"]
+    },
+    {
+      "id": "F03", "day": 4, "sentiment": "neutral", "rating": 3,
+      "channel": "in_app",
+      "text": "Impressive for simple searches. Haven't tried complex filters yet. Will report back.",
+      "tags": ["simple_queries", "wait_and_see"]
+    },
+    {
+      "id": "F04", "day": 5, "sentiment": "negative", "rating": 2,
+      "channel": "support_ticket",
+      "text": "Searched for 'high priority tasks not yet assigned' and got completely wrong results. It ignored both the priority AND the assignment filter.",
+      "tags": ["wrong_results", "multi_condition", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F05", "day": 5, "sentiment": "negative", "rating": 1,
+      "channel": "support_ticket",
+      "text": "I used search results to prepare a client status report. Found out later the results were missing 8 tasks. Had to redo the whole report. This is a serious problem.",
+      "tags": ["wrong_results", "business_impact", "HIGH_SEVERITY", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F06", "day": 5, "sentiment": "negative", "rating": 1,
+      "channel": "app_store",
+      "text": "Search is painfully slow today. Took 20 seconds to return results. Unusable.",
+      "tags": ["slow_response", "performance"]
+    },
+    {
+      "id": "F07", "day": 5, "sentiment": "negative", "rating": 2,
+      "channel": "support_ticket",
+      "text": "Complex queries with date ranges return wrong results. Single-word searches work fine. Something is broken with multi-condition logic.",
+      "tags": ["wrong_results", "multi_condition", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F08", "day": 5, "sentiment": "negative", "rating": 1,
+      "channel": "social",
+      "text": "@PurpleMerit NovaMind search is showing wrong results for filtered queries. Please fix ASAP.",
+      "tags": ["wrong_results", "public_complaint", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F09", "day": 5, "sentiment": "positive", "rating": 4,
+      "channel": "in_app",
+      "text": "Haven't hit any issues others are reporting. Works great for my use case — simple keyword-style queries in natural language.",
+      "tags": ["positive_outlier", "simple_queries"]
+    },
+    {
+      "id": "F10", "day": 5, "sentiment": "negative", "rating": 1,
+      "channel": "support_ticket",
+      "text": "Enterprise account here — Globex Corp. A project manager on my team used NovaMind search output to brief our board. The data was wrong. We need a formal explanation and a fix timeline.",
+      "tags": ["enterprise_escalation", "HIGH_SEVERITY", "business_impact", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F11", "day": 6, "sentiment": "neutral", "rating": 3,
+      "channel": "in_app",
+      "text": "Crashes seem less frequent after whatever you pushed today. Still nervous to use it for anything important.",
+      "tags": ["post_hotfix", "trust_damage", "cautious"]
+    },
+    {
+      "id": "F12", "day": 6, "sentiment": "negative", "rating": 2,
+      "channel": "support_ticket",
+      "text": "The fix helped a little but complex queries with 3+ conditions still return wrong results at least 30% of the time.",
+      "tags": ["wrong_results", "partial_fix", "multi_condition", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F13", "day": 6, "sentiment": "positive", "rating": 5,
+      "channel": "in_app",
+      "text": "Running 8 saved search workflows through NovaMind now. Saved my team 2 hours this week. Keep it stable and this becomes essential.",
+      "tags": ["power_user", "productivity", "retention_signal"]
+    },
+    {
+      "id": "F14", "day": 6, "sentiment": "neutral", "rating": 3,
+      "channel": "in_app",
+      "text": "I now manually verify every search result before acting on it. That defeats the whole purpose of AI search.",
+      "tags": ["trust_damage", "behaviour_change", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F15", "day": 6, "sentiment": "negative", "rating": 2,
+      "channel": "app_store",
+      "text": "Downgrading from 5 stars to 2. The AI search looked amazing at first but it silently gives wrong answers. You don't even know until you double-check everything manually.",
+      "tags": ["trust_damage", "silent_failure", "REPEATED_ISSUE"]
+    },
+    {
+      "id": "F16", "day": 6, "sentiment": "positive", "rating": 4,
+      "channel": "in_app",
+      "text": "Much faster today. The speed improvement is real. Still want the accuracy issue fixed but progress is visible.",
+      "tags": ["performance_improved", "cautious_optimism"]
+    },
+    {
+      "id": "F17", "day": 7, "sentiment": "negative", "rating": 1,
+      "channel": "support_ticket",
+      "text": "I cancelled my subscription. The AI search was the reason I upgraded. It still gives wrong results on anything complex. Not paying for this.",
+      "tags": ["churn", "cancellation", "HIGH_SEVERITY"]
+    },
+    {
+      "id": "F18", "day": 7, "sentiment": "neutral", "rating": 3,
+      "channel": "in_app",
+      "text": "Trust is the issue now. Even when results look right I spend extra time verifying. That extra time cancels out any time I saved using natural language.",
+      "tags": ["trust_damage", "productivity_loss", "behaviour_change"]
+    },
+    {
+      "id": "F19", "day": 7, "sentiment": "positive", "rating": 5,
+      "channel": "in_app",
+      "text": "Best feature PurpleMerit has shipped in years. For my workflow — simple team queries — it works perfectly every time. Please don't roll it back.",
+      "tags": ["power_user", "anti_rollback", "strong_positive"]
+    },
+    {
+      "id": "F20", "day": 7, "sentiment": "negative", "rating": 2,
+      "channel": "social",
+      "text": "Hey @PurpleMerit — NovaMind still returns stale results after the hotfix. Created a task 10 minutes ago, search doesn't find it.",
+      "tags": ["stale_results", "NEW_ISSUE", "public_complaint"]
+    },
+    {
+      "id": "F21", "day": 7, "sentiment": "negative", "rating": 2,
+      "channel": "support_ticket",
+      "text": "New problem since yesterday — tasks I created today don't show up in search at all. The old keyword search was instant. This is a regression.",
+      "tags": ["stale_results", "NEW_ISSUE", "indexing_lag", "HIGH_SEVERITY"]
+    },
+    {
+      "id": "F22", "day": 7, "sentiment": "neutral", "rating": 3,
+      "channel": "in_app",
+      "text": "Three issues in one week: slow on Day 5, wrong results ongoing, now missing results. Hoping the team gets on top of this.",
+      "tags": ["multiple_issues", "trust_damage"]
+    },
+    {
+      "id": "F23", "day": 7, "sentiment": "positive", "rating": 4,
+      "channel": "in_app",
+      "text": "I manage a 15-person team. NovaMind is genuinely saving us time when it works. Please just fix the accuracy and keep it running.",
+      "tags": ["power_user", "team_use", "conditional_positive"]
+    },
+    {
+      "id": "F24", "day": 7, "sentiment": "negative", "rating": 1,
+      "channel": "support_ticket",
+      "text": "Three colleagues and I all hit wrong results today on different types of queries. This is not an edge case — it's a fundamental accuracy problem.",
+      "tags": ["wrong_results", "widespread", "REPEATED_ISSUE", "HIGH_SEVERITY"]
+    },
+    {
+      "id": "F25", "day": 7, "sentiment": "neutral", "rating": 3,
+      "channel": "in_app",
+      "text": "Idea: can you show a confidence score next to search results so I know when to verify manually? Would make the product usable even with current accuracy.",
+      "tags": ["feature_request", "confidence_score", "constructive"]
+    }
+  ],
+  "summary": {
+    "positive": 8,
+    "neutral": 7,
+    "negative": 10,
+    "high_severity": 5,
+    "enterprise_escalation": 1,
+    "new_issue_day7": "Stale/missing results — indexing lag after hotfix (F20, F21)"
+  }
+}

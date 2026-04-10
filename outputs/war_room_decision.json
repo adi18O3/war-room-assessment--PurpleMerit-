@@ -1,0 +1,106 @@
+{
+  "decision": "PAUSE",
+  "confidence_score": 0.7,
+  "rationale": "Decision: PAUSE. Score: 0.50. Votes: data_analyst=PAUSE, pm_agent=PAUSE, marketing_agent=PAUSE, risk_agent=PAUSE. Search accuracy at 88.9% is still 6.1 points below target after the hotfix. Indexing lag appeared day 7 and is unresolved. Churn at 24/day (3.1x baseline) is still climbing. But 13,500 active users are engaged \u2014 pulling the feature disrupts them too. PAUSE gives engineering time to fix both issues properly.",
+  "key_drivers": [
+    "Search accuracy: 88.9% vs 95% target \u2014 gap of 6.1 points after hotfix",
+    "Churn: 24/day vs baseline 7.3 \u2014 lagging indicator, still rising",
+    "DAU: 13,500 (+13% above baseline) \u2014 engagement is real, rollback would hurt active users"
+  ],
+  "risk_register": [
+    {
+      "risk": "Enterprise customer (Globex Corp) affected \u2014 board meeting used wrong data",
+      "severity": "critical",
+      "mitigation": "Direct outreach within 24h, written root-cause + fix timeline",
+      "owner": "Customer Success + Legal"
+    },
+    {
+      "risk": "Search accuracy at 88.9% \u2014 users making decisions on wrong results",
+      "severity": "critical",
+      "mitigation": "Fix multi-condition query handling, get to 95%+",
+      "owner": "Engineering"
+    },
+    {
+      "risk": "Indexing lag (day 7) \u2014 new tasks not appearing in search",
+      "severity": "high",
+      "mitigation": "Investigate root cause immediately, revert if necessary",
+      "owner": "Engineering"
+    },
+    {
+      "risk": "Churn at 3x baseline and still climbing",
+      "severity": "high",
+      "mitigation": "Proactive outreach to users who filed tickets",
+      "owner": "Customer Success"
+    }
+  ],
+  "action_plan": [
+    {
+      "action": "Fix indexing lag \u2014 tasks created today not appearing in search",
+      "owner": "Engineering",
+      "deadline": "24h"
+    },
+    {
+      "action": "Get search accuracy to 95%+ on complex multi-condition queries",
+      "owner": "ML Engineering",
+      "deadline": "48h"
+    },
+    {
+      "action": "Contact Globex Corp \u2014 acknowledge impact, share fix timeline",
+      "owner": "Customer Success",
+      "deadline": "24h"
+    },
+    {
+      "action": "Keep rollout at 50% \u2014 do not expand until metrics stabilise",
+      "owner": "Engineering",
+      "deadline": "now"
+    },
+    {
+      "action": "Identify and process refunds for affected premium users",
+      "owner": "Finance",
+      "deadline": "48h"
+    }
+  ],
+  "communication_plan": {
+    "internal": "NovaMind Search is paused at 50% rollout. Engineering is working on accuracy and indexing fixes. Do not expand rollout until further notice.",
+    "external": "We're aware of search accuracy issues and working on a fix. We'll update you once it's resolved.",
+    "enterprise": "Call Globex Corp today. Acknowledge what happened. Send a written root-cause and timeline by end of day.",
+    "social": "Don't post proactively. Respond to direct complaints only. Wait until accuracy is fixed before any public update."
+  },
+  "proceed_conditions": [
+    "Search accuracy >= 95% on production query mix (currently 88.9%)",
+    "Indexing lag resolved \u2014 new tasks appear in results within 30s",
+    "Churn within 20% of baseline (currently 3x)",
+    "5 consecutive stable days before expanding beyond 50%",
+    "Globex Corp sign-off received on resolution"
+  ],
+  "agent_votes": {
+    "data_analyst": "PAUSE",
+    "pm_agent": "PAUSE",
+    "marketing_agent": "PAUSE",
+    "risk_agent": "PAUSE"
+  },
+  "metric_snapshot": {
+    "critical": 4,
+    "degraded": 1,
+    "healthy": 1,
+    "accuracy_today": 88.9,
+    "churn_today": 24,
+    "dau_today": 13500,
+    "response_time_ms": 590
+  },
+  "feedback_snapshot": {
+    "total": 25,
+    "positive_pct": 28,
+    "negative_pct": 48,
+    "net_score": -20.0,
+    "trajectory": "mixed",
+    "risk_level": "critical",
+    "enterprise_cases": 1,
+    "new_issues_day7": 2,
+    "top_issue": "wrong_results"
+  },
+  "feature": "NovaMind Search",
+  "company": "PurpleMerit",
+  "date": "2026-04-10",
+  "model": "llama3.1:8b"
+}
